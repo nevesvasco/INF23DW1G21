@@ -3,28 +3,52 @@
 		"_postman_id": "652d46b0-dd30-4121-b60e-48eb097783f7",
 		"name": "Nuacom_M1",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "29972438",
-		"_collection_link": "https://inf23dw1g21.postman.co/workspace/Team-Workspace~df1e1729-4d8a-43d5-8479-38abedd335b3/collection/29972433-652d46b0-dd30-4121-b60e-48eb097783f7?action=share&source=collection_link&creator=29972438"
+		"_exporter_id": "29972119",
+		"_collection_link": "https://inf23dw1g21.postman.co/workspace/Team-Workspace~df1e1729-4d8a-43d5-8479-38abedd335b3/collection/29972433-652d46b0-dd30-4121-b60e-48eb097783f7?action=share&source=collection_link&creator=29972119"
 	},
 	"item": [
 		{
-			"name": "New Request",
+			"name": "Validation Token",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "query",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "client-security-token",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "f9abfe0fef47ab68756c4158fbb617e1",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "https://api.nuacom.ie/login_digest",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nuacom",
+						"ie"
+					],
+					"path": [
+						"login_digest"
+					]
+				}
 			},
 			"response": []
 		},
 		{
-			"name": "https://api.nuacom.ie/login",
-			"protocolProfileBehavior": {
-				"disabledSystemHeaders": {
-					"connection": true,
-					"accept-encoding": true,
-					"accept": true,
-					"user-agent": true
-				}
-			},
+			"name": "Basic Auth",
 			"request": {
 				"auth": {
 					"type": "basic"
@@ -41,6 +65,46 @@
 					],
 					"path": [
 						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API Key",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "query",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "client-security-token",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "f9abfe0fef47ab68756c4158fbb617e1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nuacom.ie/login_digest",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nuacom",
+						"ie"
+					],
+					"path": [
+						"login_digest"
 					]
 				}
 			},
