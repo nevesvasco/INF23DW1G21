@@ -109,6 +109,728 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Numbers",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "f9abfe0fef47ab68756c4158fbb617e1",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-Nuacom-Token",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nuacom.ie/v1/numbers",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nuacom",
+						"ie"
+					],
+					"path": [
+						"v1",
+						"numbers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OAuth2",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "refreshRequestParams",
+							"value": [
+								{
+									"key": "grant_type",
+									"value": "rewtr4lsepqtywigt0eoweotyuyeb",
+									"enabled": true,
+									"send_as": "request_header"
+								},
+								{
+									"key": "code",
+									"value": "eoweotywilsepq0gttyurewtr4yeb",
+									"enabled": true,
+									"send_as": "request_header"
+								},
+								{
+									"key": "refresh_token",
+									"value": "rewtr4lsepqtywigt0eoweotyuyeb",
+									"enabled": true,
+									"send_as": "request_header"
+								},
+								{
+									"key": "access_token",
+									"value": "lsepq0eoweotywigttyuyebrewtr4",
+									"enabled": true,
+									"send_as": "request_header"
+								}
+							],
+							"type": "any"
+						},
+						{
+							"key": "headerPrefix",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "state",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{client_id}}",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "authRequestParams",
+							"value": [
+								{
+									"key": "response_type",
+									"value": "{{code}}",
+									"enabled": true,
+									"send_as": "request_url"
+								},
+								{
+									"key": "client_id",
+									"value": "123123123",
+									"enabled": true,
+									"send_as": "request_url"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "https://api.nuacom.ie/",
+									"enabled": true,
+									"send_as": "request_url"
+								},
+								{
+									"key": "scope",
+									"value": "full",
+									"enabled": true,
+									"send_as": "request_url"
+								},
+								{
+									"key": "state",
+									"value": "xyz",
+									"enabled": true,
+									"send_as": "request_url"
+								}
+							],
+							"type": "any"
+						},
+						{
+							"key": "refreshTokenUrl",
+							"value": "https://api.nuacom.ie/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://app.nuacom.ie/",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "OAuth Token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://api.nuacom.ie/oauth/authorize",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "implicit",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://api.nuacom.ie/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "tokenRequestParams",
+							"value": [],
+							"type": "any"
+						},
+						{
+							"key": "clientSecret",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Marcia04072013!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "karim@kpsolucoes.pt",
+							"type": "string"
+						},
+						{
+							"key": "challengeAlgorithm",
+							"value": "plain",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nuacom.ie/oauth/authorize?response_type={{code}}&client_id={{client_id}}&redirect_uri=https://api.nuacom.ie/login&scope=full&state=xyz",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nuacom",
+						"ie"
+					],
+					"path": [
+						"oauth",
+						"authorize"
+					],
+					"query": [
+						{
+							"key": "response_type",
+							"value": "{{code}}"
+						},
+						{
+							"key": "client_id",
+							"value": "{{client_id}}"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://api.nuacom.ie/login"
+						},
+						{
+							"key": "scope",
+							"value": "full"
+						},
+						{
+							"key": "state",
+							"value": "xyz"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ComentCallGet",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "X-Nuacom-Token",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "f9abfe0fef47ab68756c4158fbb617e1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nuacom.ie/v1/call_note/{{call_id}}?call_id={{call_id}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nuacom",
+						"ie"
+					],
+					"path": [
+						"v1",
+						"call_note",
+						"{{call_id}}"
+					],
+					"query": [
+						{
+							"key": "call_id",
+							"value": "{{call_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CallNotePost",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "f9abfe0fef47ab68756c4158fbb617e1",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-Nuacom-Token",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "call_id",
+							"value": "{{call_id}}",
+							"type": "text"
+						},
+						{
+							"key": "call_note",
+							"value": "This is a test",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.nuacom.ie/v1/call_note",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nuacom",
+						"ie"
+					],
+					"path": [
+						"v1",
+						"call_note"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CallRecordingGet",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "f9abfe0fef47ab68756c4158fbb617e1",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-Nuacom-Token",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nuacom.ie/v1/recording?call_id={{call_id}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nuacom",
+						"ie"
+					],
+					"path": [
+						"v1",
+						"recording"
+					],
+					"query": [
+						{
+							"key": "call_id",
+							"value": "{{call_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteRecording",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "f9abfe0fef47ab68756c4158fbb617e1",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-Nuacom-Token",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api.nuacom.ie/v1/recording/{{call_id}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nuacom",
+						"ie"
+					],
+					"path": [
+						"v1",
+						"recording",
+						"{{call_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Contact",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "f9abfe0fef47ab68756c4158fbb617e1",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-Nuacom-Token",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "John",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Smith",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "00353876543210",
+							"type": "text"
+						},
+						{
+							"key": "landline",
+							"value": "00353123456789",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "james@example.com",
+							"type": "text"
+						},
+						{
+							"key": "address1",
+							"value": " ",
+							"type": "text"
+						},
+						{
+							"key": "address2",
+							"value": " ",
+							"type": "text"
+						},
+						{
+							"key": "address3",
+							"value": " ",
+							"type": "text"
+						},
+						{
+							"key": "address4",
+							"value": " ",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "1980-07-26",
+							"type": "text"
+						},
+						{
+							"key": "comment",
+							"value": "Comment on the contact",
+							"type": "text"
+						},
+						{
+							"key": "personal",
+							"value": "true",
+							"description": "bool",
+							"type": "text"
+						},
+						{
+							"key": "groups",
+							"value": "123734",
+							"description": "number",
+							"type": "text"
+						},
+						{
+							"key": "organization",
+							"value": "28347",
+							"description": "number",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.nuacom.ie/v1/contacts",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nuacom",
+						"ie"
+					],
+					"path": [
+						"v1",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETContacts",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "f9abfe0fef47ab68756c4158fbb617e1",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-Nuacom-Token",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nuacom.ie/v1/contacts?q=GMP ASSISTANCE KPS",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nuacom",
+						"ie"
+					],
+					"path": [
+						"v1",
+						"contacts"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "GMP ASSISTANCE KPS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateContact",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "f9abfe0fef47ab68756c4158fbb617e1",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-Nuacom-Token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "{{contact_id}}",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "Nao existe",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Ja nao ha ",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.nuacom.ie/v1/contacts/{{contact_id}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nuacom",
+						"ie"
+					],
+					"path": [
+						"v1",
+						"contacts",
+						"{{contact_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteContact",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "f9abfe0fef47ab68756c4158fbb617e1",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-Nuacom-Token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api.nuacom.ie/v1/contacts/{{contact_id}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nuacom",
+						"ie"
+					],
+					"path": [
+						"v1",
+						"contacts",
+						"{{contact_id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "code",
+			"value": "eoweotywilsepq0gttyurewtr4yeb"
+		},
+		{
+			"key": "call_id",
+			"value": "svr12-core2-1695550467*3403"
+		},
+		{
+			"key": "contact_id",
+			"value": "13058450"
 		}
 	]
 }
