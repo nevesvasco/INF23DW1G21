@@ -1,0 +1,275 @@
+{
+	"info": {
+		"_postman_id": "652d46b0-dd30-4121-b60e-48eb097783f7",
+		"name": "Nuacom_M1_APIKEY",
+		"description": "## Get Contact\n\n##### PARAMETERS\n\nPath Parameters ? idnumber Required\n\nID of the Contact. **Example**: 12378434\n\n## Responses\n\n200 OK\n\n400 Error\n\n401 Unauthorized\n\n## Add Contacts\n\nAdd a new Contact\n\n##### REQUEST BODY\n\n| first_name | string |\n| last_name | string |\n| mobile | string |\n| landline | string |\n| email | string |\n| address1 | string |\n| address2 | string |\n| address3 | string |\n| address4 | string |\n| birthday | string |\n| comment | string |\n| personal | boolean<br><br>should this contact be shared across the company |\n| groups | number |\n| organization | number<br><br>Id of the organization the contacts belongs to or NULL to unset |\n\n## Responses\n\n200 OK\n\n400 Error\n\n401 Unauthorized\n\n## Update Contact\n\n##### PARAMETERS\n\nPath Parameters ? idnumber Required\n\nID of the Contact. **Example**: 12378434\n\n##### REQUEST BODY\n\n| id | integer |\n| first_name | string |\n| last_name | string |\n| mobile | string |\n| landline | string |\n| email | string |\n| address1 | string |\n| address2 | string |\n| address3 | string |\n| address4 | string |\n| birthday | string |\n| comment | string |\n| groups | < anything > |\n| organization | number<br><br>Id of the organization the contacts belongs to or NULL to unset |\n\n## Responses\n\n200 OK\n\n400 Error\n\n401 Unauthorized\n\nStartFragment\n\n## Delete Contact\n\n##### PARAMETERS\n\nPath Parameters ? idnumber Required\n\nID of the Contact. **Example**: 12378434\n\n## Responses\n\n204 Ok\n\n400 Error\n\n401 Unauthorized",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29972438",
+		"_collection_link": "https://inf23dw1g21.postman.co/workspace/Team-Workspace~df1e1729-4d8a-43d5-8479-38abedd335b3/collection/29972433-652d46b0-dd30-4121-b60e-48eb097783f7?action=share&source=collection_link&creator=29972438"
+	},
+	"item": [
+		{
+			"name": "ADD GROUP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"group_name\": \"Desenvolvimento\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.nuacom.ie/v1/groups",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nuacom",
+						"ie"
+					],
+					"path": [
+						"v1",
+						"groups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE GROUP",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n    \"name\": \"INF23DW1G21\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.nuacom.ie/v1/groups/{{group_id}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nuacom",
+						"ie"
+					],
+					"path": [
+						"v1",
+						"groups",
+						"{{group_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Contact",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"first_name\": \"John\",\r\n    \"last_name\": \"Smith\",\r\n    \"mobile\": \"00353876543210\",\r\n    \"landline\": \"00353123456789\",\r\n    \"email\": \"james@example.com\",\r\n    \"address1\": \"\",\r\n    \"address2\": \"\",\r\n    \"address3\": \"\",\r\n    \"address4\": \"\",\r\n    \"birthday\": \"1980-07-26\",\r\n    \"comment\": \"Comment on the contact\",\r\n    \"personal\": \"true\",\r\n    \"groups\": [\r\n      {{group_id}}\r\n    ],\r\n    \"organization\": 28347\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.nuacom.ie/v1/contacts",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nuacom",
+						"ie"
+					],
+					"path": [
+						"v1",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETContact",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nuacom.ie/v1/contacts/{{contact_id}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nuacom",
+						"ie"
+					],
+					"path": [
+						"v1",
+						"contacts",
+						"{{contact_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateContact",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": 21291566,\r\n\"first_name\": \"John\",\r\n\"last_name\": \"Smith\",\r\n\"mobile\": \"00353876543210\",\r\n\"landline\": \"00353123456789\",\r\n\"email\": \"james@example.com\",\r\n\"address1\": \"\",\r\n\"address2\": \"\",\r\n\"address3\": \"\",\r\n\"address4\": \"\",\r\n\"birthday\": \"1980-07-26\",\r\n\"comment\": \"Comment on the contact\",\r\n\"groups\": \"Ids of the groups the contacts belongs to\",\r\n\"organization\": 28347\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.nuacom.ie/v1/contacts/{{21291566}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nuacom",
+						"ie"
+					],
+					"path": [
+						"v1",
+						"contacts",
+						"{{21291566}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteContact",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api.nuacom.ie/v1/contacts/{{21291566}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nuacom",
+						"ie"
+					],
+					"path": [
+						"v1",
+						"contacts",
+						"{{21291566}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET GROUPS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nuacom.ie/v1/groups",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nuacom",
+						"ie"
+					],
+					"path": [
+						"v1",
+						"groups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Group",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api.nuacom.ie/v1/groups/{{group_id}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nuacom",
+						"ie"
+					],
+					"path": [
+						"v1",
+						"groups",
+						"{{group_id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "f9abfe0fef47ab68756c4158fbb617e1",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "X-Nuacom-Token",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "code",
+			"value": "eoweotywilsepq0gttyurewtr4yeb"
+		},
+		{
+			"key": "call_id",
+			"value": "svr12-core2-1695550467*3403"
+		},
+		{
+			"key": "contact_id",
+			"value": "13058450"
+		},
+		{
+			"key": "group_id",
+			"value": "15422",
+			"type": "string"
+		}
+	]
+}
